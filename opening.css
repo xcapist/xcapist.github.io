@@ -5,9 +5,13 @@ body {
     height: 100vh;
     background: black;
   }
-   
+   .titleContainer {
+     justify-content: center;
+     width: 100vw;
+     max-width: 1000px;
+   }
   .container {
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     -webkit-perspective: 800px;
