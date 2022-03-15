@@ -1,10 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './Card/Card';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="bio">
+          <Card name="Image"></Card>
+          <Card name="Name"></Card>
+          <Card name="Sections"></Card>
+          <Card name="Links"></Card>
+        </div>
+        <div className="content">
+        <Card name="About"></Card>
+        <Card name="Education"></Card>
+        <Card name="Projects"></Card>
+        <Card name="Former Jobs"></Card>
+        <Card name="Skills"></Card>
+        <Card name="Coursework"></Card>
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           React Project in Progress. Please visit some time later.
