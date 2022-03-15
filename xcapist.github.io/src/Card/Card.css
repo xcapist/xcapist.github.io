@@ -1,6 +1,7 @@
 .card {
-    margin-bottom: 20px;
-    border: 20px dashed white;
+    margin: 20px;
+    padding: 20px;
+    border: 20px dotted white;
     min-height: 60px;
     min-width: 60px;
 }

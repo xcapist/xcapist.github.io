@@ -1,14 +1,20 @@
 .App {
   text-align: center;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  text-align: center;
+}
 .bio {
-  position: absolute;
-  left: 0;
+  /*background-color: aqua;*/
+  text-align: start;
 }
 
 .content {
-  position: absolute;
-  right: 0;
+  /*background-color: white;
+  color: black;*/
+  text-align: start;
 }
 
 .App-logo {
