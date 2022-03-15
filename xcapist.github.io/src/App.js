@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Card from './Card/Card';
 import NamePlate from './NamePlate/NamePlate';
+import Links from './Links/Links';
+import Section from './Section/Section';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
             <Card name="Image"></Card>
             <NamePlate></NamePlate>
             <Card name="Sections"></Card>
-            <Card name="Links"></Card>
+            <Section name="Education"></Section>
+            <Links></Links>
           </div>
           <div className="content">
             <Card name="About"></Card>
