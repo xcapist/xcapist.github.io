@@ -4,8 +4,21 @@ import Card from './Card/Card';
 import NamePlate from './NamePlate/NamePlate';
 import Links from './Links/Links';
 import Section from './Section/Section';
+//import Carousel from './Carousel/Carousel';
 
 function App() {
+  var data = {
+    "leadingText": "All about",
+    "slides": [
+      {
+        "introline": "dogs",
+        "id": "dogs",
+        "content": {
+          "copy": "Dog ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan est ornare, ultricies erat a, dapibus lectus."
+        }
+      },
+    ]
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +31,7 @@ function App() {
             <Links></Links>
           </div>
           <div className="content">
+            {/*<Carousel data={data.slides} leadingText={data.leadingText}></Carousel>*/}
             <Card name="About"></Card>
             <Card name="Education"></Card>
             <Card name="Projects"></Card>
