@@ -1,11 +1,24 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+:root{
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-weight: 400;
+  --line-height: 1.5;
+
+  /* fluid base font size for responsive sizing */
+  --font-size-base: clamp(14px, calc(12px + 1.2vw), 18px);
+
+  /* color tokens (light & dark will override where needed) */
+  --bg: #ffffff;
+  --fg: #213547;
+  --muted: rgba(0,0,0,0.55);
+  --card-bg: rgba(0,0,0,0.03);
+  --accent: #7b61ff; /* purple accent */
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  color: var(--fg);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +28,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--accent);
   text-decoration: inherit;
 }
 a:hover {
@@ -28,10 +41,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: var(--font-size-base);
 }
 
 h1 {
-  font-size: 3.2em;
+  /* fluid heading size */
+  font-size: clamp(1.6rem, 1.2rem + 4vw, 3.2rem);
   line-height: 1.1;
 }
 
@@ -42,7 +57,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -54,15 +69,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* theme: light (default) and dark via data-theme */
+/* default light values already applied on :root */
+
+/* dark theme overrides */
+html[data-theme="dark"] {
+  --bg: #121217;
+  --fg: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.6);
+  --card-bg: rgba(255,255,255,0.03);
 }
+
+/* subtle hover for anchor in both modes */
+a:hover { color: color-mix(in srgb, var(--accent) 80%, black); }
+
